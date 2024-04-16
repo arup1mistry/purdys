@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prudy's Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo-01.png" width="100px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="images/searchbar.png" width="30px" height="30px">
+            <img src="images/menuicon.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    <div>
+        <main>
+            <section class="products">
+                <div id="products-1"> </div>
+            </section>
+        </main>
+    </div>  
+    <div class="row product-page">
+        <div class="column1">
+            <img src="images/new-01.jpg" width="100%" id="ProductImg">
+
+            <div class="small-image-row">
+                <div class="small-image-col">
+                    <img src="images/new-02.jpg" width="100%" class="small-img">
+                </div>
+                <div class="small-image-col">
+                    <img src="images/new-03.jpg" width="100%"class="small-img">
+                </div>
+                <div class="small-image-col">
+                    <img src="images/new-04.jpg" width="100%"class="small-img">
+                </div>
+                <div class="small-image-col">
+                    <img src="images/new-05.jpg" width="100%"class="small-img">
+                </div>
+            </div>
+        </div>
+        <div class="column1">
+            <h1> OREO CREME</h1>
+            <h4>50$</h4>
+            <select>
+                <option>Select size</option>
+                <option>Select strengh</option>
+                <option>Select sample</option>
+            </select>
+            <input type ="number" value="1">
+            <a href="" class="btn">Add to Cart</a>
+            <h3> Product Details </h3>
+            <p>This is the latest in line from Oreo cookies. </p>
+        </div>
+    </div>
+
+    <div class="small-container">
+        <h2 class="title">RELATED PRODUCTS</h2>
+        <div class="row">
+            <div class="column4">
+                <img src="images/new-06.jpg" >
+                <h4>PEANUT COOKIE</h4>
+                <div class="rating">
+                </div>
+            </div>
+            <div class="column4">
+                <img src="images/new-07.jpg" >
+                <h4>MILK BAR</h4>
+                <div class="rating">
+                </div>
+            </div>
+            <div class="column4">
+                <img src="images/new-08.jpg" >
+                <h4>CUP CREAM</h4>
+                <div class="rating">
+                </div>
+            </div>
+            <div class="column4">
+                <img src="images/new-09.jpg" >
+                <h4>CHEESECAKES</h4>
+                <div class="rating">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>DOWNLOAD OUR APP</h3>
+                <p>Chec for IOS or Andriod link</p>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-01.png">
+                <p>Creating the best products on the market</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li>COUPOUNS</li>
+                    <li>RESOURCES</li>
+                    <li>RETURN POLICY</li>
+                    <li>JOIN THE NEWSLETTER</li>
+                </ul>
+            </div>
+            <div class="footer-col-3">
+                <h3>FOLLOW US</h3>
+                <ul>
+                    <li>FACEBOOK</li>
+                    <li>TWITTER</li>
+                    <li>INSTAGRAM</li>
+                    <li>YOUTUBE</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------js for toggle menu---------->
+<script>
+ var MenuItems = document.getElementById("MenuItems");
+MenuItems.style.maxHeight = "0px";
+
+function menutoggle() {
+    if (MenuItems.style.maxHeight === "0px") {
+        MenuItems.style.maxHeight = "200px";
+    } else {
+        MenuItems.style.maxHeight = "0px";
+    }
+}
+
+
+</script>
+
+<!----------js for product gallry---------->
+<script>
+    var ProductImg = document.getElementById ("ProductImg");
+    var SmallImg = document.getElementsByClassName ("small-img");
+    SmallImg[0].onclick = function(){
+        ProductImg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function(){
+        ProductImg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function(){
+        ProductImg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function(){
+        ProductImg.src = SmallImg[3].src;
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+<script src="JS/details.js"></script>
+
+</body>
+</html>
